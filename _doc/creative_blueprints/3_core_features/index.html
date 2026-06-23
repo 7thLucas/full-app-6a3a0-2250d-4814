@@ -10,55 +10,60 @@
     <div class="flex items-start justify-between mb-5">
       <div>
         <h2 class="text-3xl font-black text-slate-900">Core Features</h2>
-        <p class="text-slate-400 text-sm mt-1">Built around the people who use it every day</p>
+        <p class="text-slate-400 text-sm mt-1">Three screens. One clean flow. Real transactions.</p>
       </div>
     </div>
 
     <!-- Persona chips -->
     <div class="flex items-center gap-2 mb-6 flex-wrap">
-      <span class="px-3 py-1.5 rounded-full text-xs font-bold bg-indigo-600 text-white">Shopper</span>
-      <span class="px-3 py-1.5 rounded-full text-xs font-bold bg-slate-100 text-slate-500">Seller</span>
-      <span class="px-3 py-1.5 rounded-full text-xs font-bold bg-slate-100 text-slate-500">Admin</span>
-      <span class="px-3 py-1.5 rounded-full text-xs font-bold bg-amber-100 text-amber-700 border border-amber-200">Assumption — confirm personas</span>
+      <span class="px-3 py-1.5 rounded-full text-xs font-bold bg-indigo-600 text-white">User (v1)</span>
+      <span class="px-3 py-1.5 rounded-full text-xs font-bold bg-slate-100 text-slate-500">Merchant (future)</span>
+      <span class="px-3 py-1.5 rounded-full text-xs font-bold bg-slate-100 text-slate-500">Admin (future)</span>
     </div>
 
     <!-- Feature cards grid -->
     <div class="sl-grid grid gap-4 flex-1">
 
+      <!-- HomeScreen -->
       <div class="bg-indigo-50 rounded-xl p-5 flex flex-col gap-2">
-        <div class="w-9 h-9 bg-indigo-600 rounded-lg flex items-center justify-center text-white text-base">🛍</div>
-        <h3 class="font-bold text-slate-900 text-sm">Product Browsing</h3>
-        <p class="text-slate-500 text-xs leading-relaxed">Discover and filter products across categories with smart search and recommendations.</p>
+        <div class="w-9 h-9 bg-indigo-600 rounded-lg flex items-center justify-center text-white text-base shrink-0">🏠</div>
+        <h3 class="font-bold text-slate-900 text-sm">Home Screen</h3>
+        <p class="text-slate-500 text-xs leading-relaxed">Card-based service grid — UPI Payment (active), Recharge, Bills, Services, Travel, More (placeholders). Tap UPI to begin.</p>
       </div>
 
+      <!-- PaymentScreen -->
       <div class="bg-slate-50 rounded-xl p-5 flex flex-col gap-2">
-        <div class="w-9 h-9 bg-slate-700 rounded-lg flex items-center justify-center text-white text-base">🛒</div>
-        <h3 class="font-bold text-slate-900 text-sm">Cart &amp; Checkout</h3>
-        <p class="text-slate-500 text-xs leading-relaxed">Streamlined purchase flow from cart to confirmed order with secure payment processing.</p>
+        <div class="w-9 h-9 bg-slate-700 rounded-lg flex items-center justify-center text-white text-base shrink-0">💸</div>
+        <h3 class="font-bold text-slate-900 text-sm">Payment Screen</h3>
+        <p class="text-slate-500 text-xs leading-relaxed">Amount input + "Pay Now" button. Initializes Razorpay, converts to paise (×100), handles callbacks. Disposes cleanly on exit.</p>
       </div>
 
+      <!-- ResultScreen -->
       <div class="bg-emerald-50 rounded-xl p-5 flex flex-col gap-2">
-        <div class="w-9 h-9 bg-emerald-600 rounded-lg flex items-center justify-center text-white text-base">📦</div>
-        <h3 class="font-bold text-slate-900 text-sm">Order Tracking</h3>
-        <p class="text-slate-500 text-xs leading-relaxed">Real-time order status from placement through to delivery confirmation.</p>
+        <div class="w-9 h-9 bg-emerald-600 rounded-lg flex items-center justify-center text-white text-base shrink-0">✅</div>
+        <h3 class="font-bold text-slate-900 text-sm">Result Screen</h3>
+        <p class="text-slate-500 text-xs leading-relaxed">Centered UI — Success with Payment ID, or Failed status. No extra buttons, no extra logic. Clean and final.</p>
       </div>
 
+      <!-- Razorpay Integration -->
       <div class="bg-violet-50 rounded-xl p-5 flex flex-col gap-2">
-        <div class="w-9 h-9 bg-violet-600 rounded-lg flex items-center justify-center text-white text-base">💳</div>
-        <h3 class="font-bold text-slate-900 text-sm">Payments</h3>
-        <p class="text-slate-500 text-xs leading-relaxed">Integrated payment processing — revenue flows directly to you, no platform commission.</p>
+        <div class="w-9 h-9 bg-violet-600 rounded-lg flex items-center justify-center text-white text-base shrink-0">⚡</div>
+        <h3 class="font-bold text-slate-900 text-sm">Razorpay Integration</h3>
+        <p class="text-slate-500 text-xs leading-relaxed">razorpay_flutter package. PAYMENT_SUCCESS and PAYMENT_ERROR listeners. Placeholder Key ID — swap for production key at launch.</p>
       </div>
 
+      <!-- Architecture -->
+      <div class="bg-amber-50 rounded-xl p-5 flex flex-col gap-2">
+        <div class="w-9 h-9 bg-amber-500 rounded-lg flex items-center justify-center text-white text-base shrink-0">🏗</div>
+        <h3 class="font-bold text-slate-900 text-sm">Pluggable Architecture</h3>
+        <p class="text-slate-500 text-xs leading-relaxed">screens / services / widgets / models — clean UI/logic separation. Each service is a pluggable module. Add taxi, food, courier without redesigning core.</p>
+      </div>
+
+      <!-- Play Store Ready -->
       <div class="bg-rose-50 rounded-xl p-5 flex flex-col gap-2">
-        <div class="w-9 h-9 bg-rose-500 rounded-lg flex items-center justify-center text-white text-base">👤</div>
-        <h3 class="font-bold text-slate-900 text-sm">Customer Accounts</h3>
-        <p class="text-slate-500 text-xs leading-relaxed">Profiles, order history, and preferences — your data, stored in your platform.</p>
-      </div>
-
-      <div class="border-2 border-dashed border-amber-300 rounded-xl p-5 flex flex-col gap-2 bg-amber-50">
-        <span class="text-xs font-bold text-amber-700 uppercase tracking-wide">Assumption — adjust this</span>
-        <h3 class="font-bold text-slate-700 text-sm">Feature TBD</h3>
-        <p class="text-slate-400 text-xs leading-relaxed">To be confirmed during product scoping — replace with your platform's differentiating capability.</p>
+        <div class="w-9 h-9 bg-rose-500 rounded-lg flex items-center justify-center text-white text-base shrink-0">📱</div>
+        <h3 class="font-bold text-slate-900 text-sm">Play Store Ready</h3>
+        <p class="text-slate-500 text-xs leading-relaxed">Flutter project structure follows Play Store conventions. Minimal design, no animation overload, fast performance from day one.</p>
       </div>
 
     </div>
