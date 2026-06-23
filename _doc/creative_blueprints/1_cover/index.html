@@ -1,0 +1,47 @@
+<style>
+  .mode-landscape .sl-layout { flex-direction: row; }
+  .mode-portrait .sl-layout { flex-direction: column; }
+  .mode-landscape .sl-content { width: 52%; }
+  .mode-landscape .sl-visual { width: 48%; }
+  .mode-portrait .sl-content { width: 100%; min-height: 55%; }
+  .mode-portrait .sl-visual { width: 100%; flex: 1; }
+</style>
+
+<section class="w-full h-full overflow-auto bg-white">
+  <div class="sl-layout flex h-full">
+
+    <!-- Content column -->
+    <div class="sl-content flex flex-col justify-between p-12">
+      <div>
+        <div class="flex items-center gap-3 mb-8">
+          <span class="w-8 h-1 rounded-full bg-indigo-600 inline-block"></span>
+          <span class="text-xs font-bold tracking-widest uppercase text-indigo-600">Commerce Platform</span>
+        </div>
+        <h1 class="text-5xl font-black text-slate-900 leading-tight">
+          Your Platform.<br>Your Revenue.
+        </h1>
+        <p class="text-base text-slate-500 mt-6 leading-relaxed max-w-xs">
+          A commerce engine you fully own — let customers browse, buy, and transact without sending them through someone else's marketplace.
+        </p>
+        <div class="flex items-center gap-3 mt-8">
+          <span class="inline-block w-2 h-2 rounded-full bg-indigo-600"></span>
+          <span class="text-sm text-slate-400">No commissions. No middleman. No rules but yours.</span>
+        </div>
+      </div>
+      <div>
+        <data-attribution />
+      </div>
+    </div>
+
+    <!-- Visual column -->
+    <div class="sl-visual relative overflow-hidden">
+      <img
+        src="https://api.qb-deck.quantumbyte.ai/common/image-generation?prompt=modern%20ecommerce%20app%20storefront%20product%20grid%20clean%20minimal%20interface%20soft%20indigo%20blue%20white%20premium%20design"
+        alt="Commerce Platform"
+        class="w-full h-full object-cover"
+      />
+      <div class="absolute inset-0 bg-gradient-to-r from-white via-transparent to-transparent opacity-30"></div>
+    </div>
+
+  </div>
+</section>
