@@ -1,0 +1,59 @@
+<style>
+  .mode-landscape .sl-layout { flex-direction: row; gap: 2.5rem; }
+  .mode-portrait .sl-layout { flex-direction: column; gap: 1.5rem; }
+  .mode-landscape .sl-narrative { width: 58%; }
+  .mode-landscape .sl-visual { width: 42%; }
+  .mode-portrait .sl-narrative { width: 100%; }
+  .mode-portrait .sl-visual { width: 100%; flex: 1; min-height: 200px; }
+</style>
+
+<section class="w-full h-full overflow-auto bg-white">
+  <div class="sl-layout flex h-full p-12">
+
+    <!-- Narrative column -->
+    <div class="sl-narrative flex flex-col justify-center gap-8">
+
+      <!-- Problem -->
+      <div>
+        <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-bold bg-red-50 text-red-600 uppercase tracking-wide mb-4">
+          <span class="w-1.5 h-1.5 rounded-full bg-red-500 inline-block"></span>
+          The Problem
+        </span>
+        <h2 class="text-2xl font-black text-slate-900 leading-snug">
+          Selling through a marketplace is a tax on your own customers
+        </h2>
+        <p class="text-slate-500 text-sm mt-3 leading-relaxed">
+          Every sale on a third-party platform costs you in commission fees, lost customer data, and zero control over the buying experience. You grow their brand, not yours.
+        </p>
+      </div>
+
+      <!-- Divider -->
+      <div class="w-full h-px bg-slate-100"></div>
+
+      <!-- Solution -->
+      <div>
+        <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-bold bg-indigo-50 text-indigo-600 uppercase tracking-wide mb-4">
+          <span class="w-1.5 h-1.5 rounded-full bg-indigo-600 inline-block"></span>
+          The Solution
+        </span>
+        <h2 class="text-2xl font-black text-slate-900 leading-snug">
+          A platform you own — customers, data, and every dollar of revenue
+        </h2>
+        <p class="text-slate-500 text-sm mt-3 leading-relaxed">
+          A purpose-built commerce app with direct customer relationships, full pricing control, and an experience shaped entirely around your brand — not a marketplace's rulebook.
+        </p>
+      </div>
+
+    </div>
+
+    <!-- Visual column -->
+    <div class="sl-visual rounded-2xl overflow-hidden bg-indigo-50 flex items-center justify-center">
+      <img
+        src="https://api.qb-deck.quantumbyte.ai/common/image-generation?prompt=business%20owner%20owning%20their%20online%20store%20confident%20direct%20sales%20no%20middleman%20clean%20illustration%20minimal%20indigo%20white"
+        alt="Own your platform"
+        class="w-full h-full object-cover"
+      />
+    </div>
+
+  </div>
+</section>
